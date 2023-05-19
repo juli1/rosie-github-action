@@ -38,8 +38,6 @@ EOF
 ########################################################
 # check variables
 ########################################################
-DD_API_KEY="$INPUT_DD_API_KEY"
-DD_APP_KEY="$INPUT_DD_APP_KEY"
 if [ -z "$DD_API_KEY" ]; then
     echo "DD_API_KEY not set. Please set one and try again."
     exit 1
