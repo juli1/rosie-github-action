@@ -5,6 +5,7 @@ FROM amazoncorretto:17
 RUN curl -sL https://rpm.nodesource.com/setup_18.x | bash -
 RUN yum -y update
 RUN yum -y install unzip
+RUN yum -y install nodejs # for npm
 
 # Copy files from our repository location to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
