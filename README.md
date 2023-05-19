@@ -17,7 +17,7 @@ Example of configuration
 on: [push]
 
 jobs:
-  check-quality:
+  datadog-static-analysis:
     runs-on: ubuntu-latest
     name: Datadog Static Analyzer
     steps:
