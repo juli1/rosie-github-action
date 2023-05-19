@@ -80,11 +80,11 @@ CLI_LOCATION=$TOOL_DIRECTORY/cli-1.0-SNAPSHOT/bin/cli
 echo "Installing 'datadog-ci'"
 npm install -g @datadog/datadog-ci || exit 1
 
-DATADOG_CLI_PATH=$(which datadog-ci)
+DATADOG_CLI_PATH=/usr/bin/datadog-ci
 
 # Check that datadog-ci was installed
-if [ $? -ne 0 ]; then
-    echo "The datadog-ci was not installed correctly."
+if [ ! -x $DATADOG_CLI_PATH ]; then
+    echo "The datadog-ci was not installed correctly, not found in $DATADOG_CLI_PATH."
     exit 1
 fi
 
