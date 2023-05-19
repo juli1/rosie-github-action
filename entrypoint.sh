@@ -70,7 +70,7 @@ fi
 
 cd "$TOOL_DIRECTORY" || exit 1
 curl -L -O http://dtdg.co/latest-static-analyzer || exit 1
-unzip latest-static-analyzer || exit 1
+unzip latest-static-analyzer > /dev/null 2>&1 || exit 1
 CLI_LOCATION=$TOOL_DIRECTORY/cli-1.0-SNAPSHOT/bin/cli
 
 
