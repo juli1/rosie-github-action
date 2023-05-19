@@ -111,7 +111,7 @@ echo "Done: will output results at $OUTPUT_FILE"
 ########################################################
 
 echo "Starting a static analysis"
-$CLI_LOCATION --directory "${GITHUB_WORKSPACE}" -t true -o "$OUTPUT_FILE" -f sarif
+$CLI_LOCATION --directory "${GITHUB_WORKSPACE}" -t true -o "$OUTPUT_FILE" -f sarif || exit 1
 echo "Done"
 
 
